@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plumisure (Pty) Ltd | 24-Hour Emergency Plumbers Johannesburg</title>
+<meta name="description" content="24-hour emergency plumbing in Melville, Johannesburg. Rated 4.7 on Google. Call 072 937 9250.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:90px}
+body{font-family:Inter,system-ui,sans-serif;background:#0b1220;color:#e2e8f0}
+.pulse-ring{animation:pr 1.8s infinite}
+@keyframes pr{0%{box-shadow:0 0 0 0 rgba(245,158,11,.7)}70%{box-shadow:0 0 0 14px rgba(245,158,11,0)}100%{box-shadow:0 0 0 0 rgba(245,158,11,0)}}
+.card{transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px -12px rgba(20,184,166,.35);border-color:#f59e0b}
+.grad-text{background:linear-gradient(90deg,#fbbf24,#f97316);-webkit-background-clip:text;background-clip:text;color:transparent}
+#toast{transform:translateY(-140%);transition:transform .4s}
+#toast.show{transform:translateY(0)}
+input,select,textarea{color-scheme:light}
+</style>
+</head>
+<body>
+
+<div id="toast" class="fixed top-4 left-1/2 -translate-x-1/2 z-[100] bg-emerald-500 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 max-w-[92vw]">
+  <i data-lucide="check-circle-2" class="w-6 h-6 shrink-0"></i><span id="toastMsg" class="font-semibold text-sm"></span>
+</div>
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-[#0b1220]/90 backdrop-blur border-b border-white/10">
+  <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 font-extrabold text-lg text-white">
+      <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-teal-400 to-blue-600 grid place-items-center"><i data-lucide="shield-check" class="w-5 h-5 text-white"></i></span>
+      Plumi<span class="text-amber-400">sure</span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+      <a href="#services" class="hover:text-amber-400">Services</a>
+      <a href="#why" class="hover:text-amber-400">Why Choose Us</a>
+      <a href="#pricing" class="hover:text-amber-400">Pricing</a>
+      <a href="#testimonials" class="hover:text-amber-400">Testimonials</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="tel:+27729379250" class="pulse-ring flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-3 sm:px-4 py-2 rounded-full text-sm">
+        <i data-lucide="phone-call" class="w-4 h-4"></i><span class="hidden sm:inline">Emergency:</span> 072 937 9250
+      </a>
+      <button id="menuBtn" class="md:hidden p-2 text-white" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 px-4 py-3 flex-col gap-3 text-slate-200 font-medium">
+    <a href="#services" class="block py-1">Services</a><a href="#why" class="block py-1">Why Choose Us</a>
+    <a href="#pricing" class="block py-1">Pricing</a><a href="#testimonials" class="block py-1">Testimonials</a>
+    <a href="#contact" class="block py-1 text-amber-400">Book Online</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#0b1220] via-[#0f2a44] to-teal-900/60"></div>
+  <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-teal-500/20 blur-3xl"></div>
+  <div class="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-amber-500/10 blur-3xl"></div>
+  <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-28 grid md:grid-cols-5 gap-10 items-center">
+    <div class="md:col-span-3">
+      <span class="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-3 py-1 text-xs font-semibold text-teal-300 mb-5">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Your No. 1 24-hour emergency plumbing company
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">Leaky Pipes? Clogged Drains? <span class="grad-text">We Fix It Right the First Time.</span></h1>
+      <p class="mt-5 text-lg text-slate-300 max-w-xl">When water is where it shouldn't be, every minute costs you. <strong class="text-white">Plumisure</strong> answers emergencies 24/7, finds the real problem fast and fixes it properly, with honest pricing and no rip-offs.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#contact" class="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 font-extrabold px-7 py-4 rounded-xl shadow-lg shadow-amber-500/30 hover:scale-[1.03] transition"><i data-lucide="calendar-check" class="w-5 h-5"></i> Book Online</a>
+        <a href="tel:+27729379250" class="flex items-center justify-center gap-2 border-2 border-white/30 text-white font-bold px-7 py-4 rounded-xl hover:bg-white/10 transition"><i data-lucide="phone" class="w-5 h-5"></i> Call Now: 072 937 9250</a>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-slate-200">
+        <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-teal-400"></i> Licensed &amp; Insured</span>
+        <span class="flex items-center gap-2"><i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i> 4.7 Rated · 27 Google Reviews</span>
+        <span class="flex items-center gap-2"><i data-lucide="clock" class="w-5 h-5 text-teal-400"></i> 24-Hour Emergency Line</span>
+      </div>
+    </div>
+    <div class="md:col-span-2">
+      <div class="bg-white/5 border border-white/10 backdrop-blur rounded-2xl p-6 shadow-2xl">
+        <p class="text-xs uppercase tracking-widest text-amber-400 font-bold">The Plumisure promise</p>
+        <div class="mt-4 space-y-4">
+          <div class="flex items-center gap-4"><div class="text-3xl font-extrabold text-white w-20">4.7<span class="text-amber-400 text-lg">★</span></div><p class="text-sm text-slate-300">Average rating from 27 Johannesburg customers</p></div>
+          <div class="flex items-center gap-4"><div class="text-3xl font-extrabold text-white w-20">24/7</div><p class="text-sm text-slate-300">Emergency callouts, nights and weekends</p></div>
+          <div class="flex items-center gap-4"><div class="text-3xl font-extrabold text-white w-20">1<span class="text-amber-400 text-lg">&nbsp;visit</span></div><p class="text-sm text-slate-300">Aim to diagnose and fix it right, first time</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 bg-[#0e1626]">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="text-amber-400 font-bold text-sm uppercase tracking-widest">Our Services</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-white">Whatever's Leaking, Blocked or Broken, We've Got It</h2>
+      <p class="mt-3 text-slate-400">Fast, friendly and efficient plumbing for homes and businesses across Johannesburg.</p>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="card bg-slate-800/60 border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 grid place-items-center"><i data-lucide="siren" class="w-7 h-7 text-slate-900"></i></div>
+        <h3 class="mt-5 text-xl font-bold text-white">Emergency Plumbing</h3>
+        <p class="mt-2 text-slate-400 text-sm flex-1">Burst pipes, flooding and overflowing toilets. We stop the damage fast, day or night.</p>
+        <a href="#contact" data-service="Emergency Plumbing" class="inquire mt-5 inline-flex items-center gap-1 text-amber-400 font-semibold text-sm">Inquire <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </article>
+      <article class="card bg-slate-800/60 border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-400 to-blue-600 grid place-items-center"><i data-lucide="search" class="w-7 h-7 text-white"></i></div>
+        <h3 class="mt-5 text-xl font-bold text-white">Leak Detection</h3>
+        <p class="mt-2 text-slate-400 text-sm flex-1">Leak under the floor or a damp wall? We locate it precisely and fix it without guesswork.</p>
+        <a href="#contact" data-service="Leak Detection" class="inquire mt-5 inline-flex items-center gap-1 text-amber-400 font-semibold text-sm">Inquire <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </article>
+      <article class="card bg-slate-800/60 border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-400 to-blue-600 grid place-items-center"><i data-lucide="waves" class="w-7 h-7 text-white"></i></div>
+        <h3 class="mt-5 text-xl font-bold text-white">Drain Cleaning</h3>
+        <p class="mt-2 text-slate-400 text-sm flex-1">Blocked sinks, showers and sewers cleared properly, so they stay clear.</p>
+        <a href="#contact" data-service="Drain Cleaning" class="inquire mt-5 inline-flex items-center gap-1 text-amber-400 font-semibold text-sm">Inquire <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </article>
+      <article class="card bg-slate-800/60 border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 grid place-items-center"><i data-lucide="flame" class="w-7 h-7 text-slate-900"></i></div>
+        <h3 class="mt-5 text-xl font-bold text-white">Geysers &amp; Water Heaters</h3>
+        <p class="mt-2 text-slate-400 text-sm flex-1">Repairs, replacements and new installs. Hot water back on, bills down.</p>
+        <a href="#contact" data-service="Geyser / Water Heater" class="inquire mt-5 inline-flex items-center gap-1 text-amber-400 font-semibold text-sm">Inquire <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </article>
+      <article class="card bg-slate-800/60 border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-400 to-blue-600 grid place-items-center"><i data-lucide="bath" class="w-7 h-7 text-white"></i></div>
+        <h3 class="mt-5 text-xl font-bold text-white">Bathroom Repairs &amp; Tiling</h3>
+        <p class="mt-2 text-slate-400 text-sm flex-1">We open up, repair the leak and leave the floor tiled and finished. One team, start to end.</p>
+        <a href="#contact" data-service="Bathroom Repairs" class="inquire mt-5 inline-flex items-center gap-1 text-amber-400 font-semibold text-sm">Inquire <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </article>
+      <article class="card bg-slate-800/60 border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 grid place-items-center"><i data-lucide="wrench" class="w-7 h-7 text-slate-900"></i></div>
+        <h3 class="mt-5 text-xl font-bold text-white">General Repairs</h3>
+        <p class="mt-2 text-slate-400 text-sm flex-1">Taps, toilets, valves and fittings. Small jobs get the same careful attention as big ones.</p>
+        <a href="#contact" data-service="General Repairs" class="inquire mt-5 inline-flex items-center gap-1 text-amber-400 font-semibold text-sm">Inquire <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="text-amber-400 font-bold text-sm uppercase tracking-widest">Why Choose Us</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-white">Friendly, Efficient and Honest</h2>
+      <p class="mt-3 text-slate-400">Customers say we add so much value they wondered why we didn't charge more. We'd rather earn your trust.</p>
+    </div>
+    <div class="mt-12 grid md:grid-cols-4 gap-6">
+      <div class="relative bg-gradient-to-b from-slate-800 to-slate-900 border border-white/10 rounded-2xl p-6">
+        <span class="absolute -top-4 left-6 bg-amber-500 text-slate-900 font-extrabold w-8 h-8 rounded-full grid place-items-center">1</span>
+        <i data-lucide="timer" class="w-9 h-9 text-teal-400"></i>
+        <h3 class="mt-4 font-bold text-white text-lg">60-Minute Response</h3>
+        <p class="mt-2 text-sm text-slate-400">Call and we move. Major leak on Monday, sorted by Tuesday evening. That's the pace we work at.</p>
+      </div>
+      <div class="relative bg-gradient-to-b from-slate-800 to-slate-900 border border-white/10 rounded-2xl p-6">
+        <span class="absolute -top-4 left-6 bg-amber-500 text-slate-900 font-extrabold w-8 h-8 rounded-full grid place-items-center">2</span>
+        <i data-lucide="receipt" class="w-9 h-9 text-teal-400"></i>
+        <h3 class="mt-4 font-bold text-white text-lg">Upfront Pricing</h3>
+        <p class="mt-2 text-sm text-slate-400">You know the price before we start. No padding, no tricks, no rip-offs.</p>
+      </div>
+      <div class="relative bg-gradient-to-b from-slate-800 to-slate-900 border border-white/10 rounded-2xl p-6">
+        <span class="absolute -top-4 left-6 bg-amber-500 text-slate-900 font-extrabold w-8 h-8 rounded-full grid place-items-center">3</span>
+        <i data-lucide="badge-check" class="w-9 h-9 text-teal-400"></i>
+        <h3 class="mt-4 font-bold text-white text-lg">Certified Technicians</h3>
+        <p class="mt-2 text-sm text-slate-400">Skilled problem solvers who find the root cause instead of patching symptoms.</p>
+      </div>
+      <div class="relative bg-gradient-to-b from-slate-800 to-slate-900 border border-white/10 rounded-2xl p-6">
+        <span class="absolute -top-4 left-6 bg-amber-500 text-slate-900 font-extrabold w-8 h-8 rounded-full grid place-items-center">4</span>
+        <i data-lucide="hammer" class="w-9 h-9 text-teal-400"></i>
+        <h3 class="mt-4 font-bold text-white text-lg">Fixed Start to Finish</h3>
+        <p class="mt-2 text-sm text-slate-400">From locating the leak to repairing and re-tiling, the job is sorted and done properly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATOR -->
+<section id="pricing" class="py-20 bg-gradient-to-br from-[#0f2a44] to-teal-900/50">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center">
+      <p class="text-amber-400 font-bold text-sm uppercase tracking-widest">Instant Estimate</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-white">Know the Cost Before You Call</h2>
+      <p class="mt-3 text-slate-300">Pick your problem and see a realistic price range in seconds.</p>
+    </div>
+    <div class="mt-10 bg-white rounded-3xl shadow-2xl p-6 md:p-10 grid md:grid-cols-2 gap-8 text-slate-800">
+      <div class="space-y-6">
+        <div>
+          <label for="estService" class="block text-sm font-bold mb-2">What do you need help with?</label>
+          <select id="estService" class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 bg-white text-slate-900 font-medium focus:border-teal-500 focus:outline-none">
+            <option value="leak">Leak repair</option>
+            <option value="drain">Drain unblocking</option>
+            <option value="detect">Leak detection</option>
+            <option value="burst">Burst pipe</option>
+            <option value="floor">Floor leak repair incl. re-tiling</option>
+            <option value="geyserRepair">Geyser repair</option>
+            <option value="geyserNew">Geyser replacement</option>
+            <option value="tap">Tap / toilet repair</option>
+          </select>
+        </div>
+        <label class="flex items-start gap-3 cursor-pointer bg-amber-50 border-2 border-amber-200 rounded-xl p-4">
+          <input id="estRush" type="checkbox" class="mt-1 w-5 h-5 accent-amber-500">
+          <span><span class="font-bold flex items-center gap-1">Emergency Rush <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i></span><span class="text-sm text-slate-600">Priority dispatch, nights, weekends and holidays.</span></span>
+        </label>
+      </div>
+      <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 text-white flex flex-col justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-widest text-teal-300 font-bold">Estimated price range</p>
+          <p id="estOut" class="mt-3 text-4xl font-extrabold grad-text">R0 – R0</p>
+          <p id="estNote" class="mt-3 text-sm text-slate-300"></p>
+        </div>
+        <button id="lockBtn" class="mt-6 w-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 font-extrabold py-3 rounded-xl hover:scale-[1.02] transition flex items-center justify-center gap-2"><i data-lucide="lock" class="w-5 h-5"></i> Lock in this Estimate</button>
+      </div>
+    </div>
+    <p class="mt-4 text-center text-xs text-slate-400">Estimates are a guide only. Your plumber confirms the final, fixed price on site before work begins.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-20">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <p class="text-amber-400 font-bold text-sm uppercase tracking-widest">Testimonials</p>
+    <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-white">Rated 4.7 Stars on Google</h2>
+    <div class="mt-10 relative">
+      <div id="slider" class="bg-slate-800/70 border border-white/10 rounded-3xl p-8 md:p-10 min-h-[340px] flex flex-col items-center justify-center"></div>
+      <div class="mt-6 flex items-center justify-center gap-4">
+        <button id="prev" class="w-11 h-11 rounded-full border border-white/20 grid place-items-center hover:bg-white/10" aria-label="Previous"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+        <div id="dots" class="flex gap-2"></div>
+        <button id="next" class="w-11 h-11 rounded-full border border-white/20 grid place-items-center hover:bg-white/10" aria-label="Next"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 bg-[#0e1626]">
+  <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-2">
+      <p class="text-amber-400 font-bold text-sm uppercase tracking-widest">Book Online</p>
+      <h2 class="mt-2 text-3xl font-extrabold text-white">Tell Us What's Wrong. We'll Handle the Rest.</h2>
+      <p class="mt-4 text-slate-400">Send your request and we'll call you back fast. If it's an emergency, don't wait. Call us straight away.</p>
+      <a href="tel:+27729379250" class="mt-6 inline-flex items-center gap-3 bg-amber-500 text-slate-900 font-extrabold px-5 py-3 rounded-xl"><i data-lucide="phone-call" class="w-5 h-5"></i> 072 937 9250</a>
+      <ul class="mt-6 space-y-3 text-sm text-slate-300">
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Free, no-obligation quote</li>
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> 24-hour emergency callouts</li>
+        <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-400 mt-0.5 shrink-0"></i> Melville, Auckland Park, Johannesburg, 2093</li>
+      </ul>
+      <a href="https://www.google.com/maps/search/?api=1&query=Melville+Auckland+Park+Johannesburg+2093" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-1 text-amber-400 font-semibold text-sm">Get directions <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+    </div>
+    <form id="form" class="md:col-span-3 bg-white rounded-3xl p-6 md:p-8 text-slate-800 space-y-4 shadow-2xl" novalidate>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div><label for="name" class="text-sm font-bold">Full Name</label><input id="name" required class="mt-1 w-full border-2 border-slate-200 rounded-xl px-4 py-3 bg-white text-slate-900 focus:border-teal-500 focus:outline-none" placeholder="Your name"></div>
+        <div><label for="phone" class="text-sm font-bold">Phone Number</label><input id="phone" type="tel" required class="mt-1 w-full border-2 border-slate-200 rounded-xl px-4 py-3 bg-white text-slate-900 focus:border-teal-500 focus:outline-none" placeholder="072 000 0000"></div>
+      </div>
+      <div><label for="service" class="text-sm font-bold">Service Needed</label>
+        <select id="service" required class="mt-1 w-full border-2 border-slate-200 rounded-xl px-4 py-3 bg-white text-slate-900 focus:border-teal-500 focus:outline-none">
+          <option value="">Select a service…</option>
+          <option>Emergency Plumbing</option><option>Leak Detection</option><option>Drain Cleaning</option><option>Geyser / Water Heater</option><option>Bathroom Repairs</option><option>General Repairs</option><option>Other</option>
+        </select></div>
+      <div><label for="message" class="text-sm font-bold">Message</label><textarea id="message" rows="4" class="mt-1 w-full border-2 border-slate-200 rounded-xl px-4 py-3 bg-white text-slate-900 focus:border-teal-500 focus:outline-none" placeholder="Describe the problem and your suburb…"></textarea></div>
+      <p id="err" class="hidden text-sm text-red-600 font-semibold"></p>
+      <button class="w-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 font-extrabold py-4 rounded-xl hover:scale-[1.02] transition flex items-center justify-center gap-2"><i data-lucide="send" class="w-5 h-5"></i> Send Request</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="bg-[#070c17] border-t border-white/10 py-12">
+  <div class="max-w-6xl mx-auto px-4 grid sm:grid-cols-3 gap-8 text-sm text-slate-400">
+    <div><p class="font-extrabold text-white text-lg">Plumi<span class="text-amber-400">sure</span> (Pty) Ltd</p><p class="mt-2">Your No. 1 24-hour emergency plumbing company. Honest, fast and friendly.</p></div>
+    <div><p class="font-bold text-white mb-2">Quick Links</p><div class="space-y-1"><a href="#services" class="block hover:text-amber-400">Services</a><a href="#why" class="block hover:text-amber-400">Why Choose Us</a><a href="#pricing" class="block hover:text-amber-400">Pricing</a><a href="#testimonials" class="block hover:text-amber-400">Testimonials</a><a href="#contact" class="block hover:text-amber-400">Book Online</a></div></div>
+    <div><p class="font-bold text-white mb-2">Operating Hours</p><p>Emergency callouts: 24 hours, 7 days a week.</p><p class="mt-1">Office &amp; quotes: from 7:30 am.</p><p class="mt-2">Melville, Auckland Park, Johannesburg, 2093</p><a href="tel:+27729379250" class="mt-2 inline-block text-amber-400 font-bold">072 937 9250</a></div>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-white/10 text-xs text-slate-500">
+    <p>&copy; <span id="yr"></span> Plumisure (Pty) Ltd. All rights reserved.</p>
+    <p class="mt-1">Disclaimer: Online estimates are indicative only. Final pricing is confirmed on site after inspection and before work starts.</p>
+  </div>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+$('yr').textContent=new Date().getFullYear();
+
+$('menuBtn').onclick=()=>{const m=$('mobileMenu');m.classList.toggle('hidden');m.classList.toggle('flex')};
+document.querySelectorAll('#mobileMenu a').forEach(a=>a.onclick=()=>{$('mobileMenu').classList.add('hidden');$('mobileMenu').classList.remove('flex')});
+
+let tt;function toast(msg){$('toastMsg').textContent=msg;$('toast').classList.add('show');clearTimeout(tt);tt=setTimeout(()=>$('toast').classList.remove('show'),4500)}
+
+// Estimator (ZAR, indicative)
+const P={leak:[650,1800,'Leak repair'],drain:[550,1500,'Drain unblocking'],detect:[900,2500,'Leak detection'],burst:[1200,3800,'Burst pipe'],floor:[3500,12000,'Floor leak repair incl. re-tiling'],geyserRepair:[900,2800,'Geyser repair'],geyserNew:[4500,9500,'Geyser replacement'],tap:[450,1200,'Tap / toilet repair']};
+const fmt=n=>'R'+n.toLocaleString('en-ZA').replace(/\u00a0/g,' ');
+function est(){const [lo,hi,label]=P[$('estService').value];const r=$('estRush').checked;const m=r?1.35:1;
+  $('estOut').textContent=fmt(Math.round(lo*m/50)*50)+' – '+fmt(Math.round(hi*m/50)*50);
+  $('estNote').textContent=r?'Includes priority dispatch. A plumber is sent to you immediately.':'Standard scheduling. Switch on Emergency Rush if it cannot wait.';
+  return label+(r?' (Emergency Rush)':'')+' — estimate '+$('estOut').textContent}
+$('estService').onchange=est;$('estRush').onchange=est;est();
+const map={leak:'Emergency Plumbing',drain:'Drain Cleaning',detect:'Leak Detection',burst:'Emergency Plumbing',floor:'Bathroom Repairs',geyserRepair:'Geyser / Water Heater',geyserNew:'Geyser / Water Heater',tap:'General Repairs'};
+$('lockBtn').onclick=()=>{const t=est();$('service').value=map[$('estService').value];$('message').value='I\'d like to lock in this estimate: '+t+'.';$('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>$('name').focus({preventScroll:true}),600);toast('Estimate added to your request. Just add your details.')};
+document.querySelectorAll('.inquire').forEach(a=>a.addEventListener('click',()=>{$('service').value=a.dataset.service}));
+
+// Reviews (from the Google listing)
+const R=[
+ ['Frank T.','a year ago','Best plumber experience ever. Shanno is friendly, efficient, and doesn\'t try to rip you off. So much added value, he should have charged us more!',5,'Google Local Guide'],
+ ['Denver H.','a year ago','I contacted Shannon on Monday morning about a major leak under my bathroom floor. By Tuesday COB the repairs were complete. I couldn\'t believe how quickly he worked. He located and chopped the floor up and repaired including tiling. Great value for knowing the job is sorted.',5,'Google review']];
+const cols=['from-teal-400 to-blue-600','from-amber-400 to-orange-500'];
+let i=0,timer;
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function show(n){i=(n+R.length)%R.length;const r=R[i];
+ $('slider').innerHTML=`<div class="flex gap-1 text-amber-400">${'<i data-lucide="star" class="w-6 h-6 fill-amber-400"></i>'.repeat(r[3])}</div>
+ <p class="mt-5 text-lg md:text-xl text-slate-100 leading-relaxed">&ldquo;${esc(r[2])}&rdquo;</p>
+ <div class="mt-6 flex items-center gap-3"><div class="w-12 h-12 rounded-full bg-gradient-to-br ${cols[i%2]} grid place-items-center font-extrabold text-white">${r[0][0]}</div><div class="text-left"><p class="font-bold text-white">${esc(r[0])}</p><p class="text-xs text-slate-400">${r[4]} · ${r[1]}</p></div></div>`;
+ $('dots').innerHTML=R.map((_,k)=>`<button data-k="${k}" aria-label="Review ${k+1}" class="h-2.5 rounded-full transition-all ${k===i?'w-7 bg-amber-400':'w-2.5 bg-white/30'}"></button>`).join('');
+ $('dots').querySelectorAll('button').forEach(b=>b.onclick=()=>{show(+b.dataset.k);auto()});
+ lucide.createIcons()}
+function auto(){clearInterval(timer);timer=setInterval(()=>show(i+1),7000)}
+$('prev').onclick=()=>{show(i-1);auto()};$('next').onclick=()=>{show(i+1);auto()};
+show(0);auto();
+
+// Form
+$('form').addEventListener('submit',e=>{e.preventDefault();
+ const n=$('name').value.trim(),p=$('phone').value.trim(),s=$('service').value;const err=$('err');
+ if(!n||!/^[+()\d\s-]{9,}$/.test(p)||!s){err.textContent='Please add your name, a valid phone number and the service you need.';err.classList.remove('hidden');return}
+ err.classList.add('hidden');toast('Thanks '+n.split(' ')[0]+'! Request received. We\'ll call you shortly.');e.target.reset()});
+
+lucide.createIcons();
+</script>
+</body>
+</html>
